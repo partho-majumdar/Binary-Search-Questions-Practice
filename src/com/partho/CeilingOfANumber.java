@@ -15,23 +15,33 @@ public class CeilingOfANumber {
 
         boolean isAsc = arr[start] < arr[end];
 
+        if (target > arr[arr.length - 1]) {
+            return -1;
+        }
+
         while (start <= end) {
             int mid = (start + ((end - start) / 2));
 
             if (isAsc) {
                 if (target < arr[mid]) {
                     end = mid - 1;
-                } else if (target > arr[mid]) {
+                }
+                else if (target > arr[mid]) {
                     start = mid + 1;
-                } else {
+                }
+                else {
                     return mid;
                 }
-            } else {
+            }
+
+            else {
                 if (target > arr[mid]) {
                     end = mid - 1;
-                } else if (target < arr[mid]) {
+                }
+                else if (target < arr[mid]) {
                     start = mid + 1;
-                } else {
+                }
+                else {
                     return mid;
                 }
             }
