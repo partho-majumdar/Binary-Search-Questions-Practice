@@ -1,6 +1,7 @@
 package com.partho;
 
 public class FindPositionInfiniteNum {
+
     public static void main(String[] args) {
         int[] infiniteArr = {-8, -5, -2, 0, 3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170};
         int target = 10;
@@ -14,8 +15,8 @@ public class FindPositionInfiniteNum {
 
         while (target > arr[end]) {
             int temp = end + 1;
-            end = end + (end - start + 1);
-            start = temp;
+            end = end + (end - start + 1); // here start is old start ==> new end = previous end + (size of box * 2) ==> size of box = (old end - old start + 1)
+            start = temp; // here start is new start
         }
         return binarySearch(arr, target, start, end);
     }
@@ -41,4 +42,7 @@ public class FindPositionInfiniteNum {
 
 /*
     https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
+    01. If target element is greater than end element ih this chunk
+    02. Double the size
+    03. Apply Binary Search
 */
