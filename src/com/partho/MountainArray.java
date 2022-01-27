@@ -44,7 +44,6 @@ public class MountainArray {
             if (arr[mid] == target) {
                 return mid;
             }
-
             if (isAsc) {
                 if (target < arr[mid]) {
                     end = mid - 1;

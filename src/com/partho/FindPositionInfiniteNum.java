@@ -42,7 +42,7 @@ public class FindPositionInfiniteNum {
 
 /*
     https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
-    01. If target element is greater than end element ih this chunk
+    01. If target element is greater than end element in this chunk
     02. Double the size
     03. Apply Binary Search
 */
